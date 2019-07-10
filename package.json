@@ -1,0 +1,33 @@
+{
+  "name": "hanafuda-js",
+  "version": "1.0.0",
+  "description": "A web app to count points in the Japanese card game Hanafuda.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleskaar/hanafuda-js.git"
+  },
+  "author": "Ole Skaar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oleskaar/hanafuda-js/issues"
+  },
+  "homepage": "https://github.com/oleskaar/hanafuda-js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "html-webpack-plugin": "^3.2.0"
+  }
+}
