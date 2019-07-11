@@ -1,0 +1,91 @@
+[{
+    "name": "January",
+    "points": 10,
+    "special": "None",
+    "cards": ["january1", "january2", "january3", "january4"]
+},
+ {
+    "name": "February",
+    "points": 10,
+    "special": "None",
+    "cards": ["february1", "february2", "february3", "february4"]
+},
+ {
+    "name": "March",
+    "points": 10,
+    "special": "None",
+    "cards": ["march1", "march2", "march3", "march4"]
+},
+ {
+    "name": "April",
+    "points": 10,
+    "special": "None",
+    "cards": ["april1", "april2", "april3", "april4"]
+},
+ {
+    "name": "May",
+    "points": 10,
+    "special": "None",
+    "cards": ["may1", "may2", "may3", "may4"]
+},
+ {
+    "name": "June",
+    "points": 10,
+    "special": "None",
+    "cards": ["june1", "june2", "june3", "june4"]
+},
+ {
+    "name": "July",
+    "points": 10,
+    "special": "None",
+    "cards": ["july1", "july2", "july3", "july4"]
+},
+ {
+    "name": "August",
+    "points": 10,
+    "special": "None",
+    "cards": ["august1", "august2", "august3", "august4"]
+},
+ {
+    "name": "September",
+    "points": 10,
+    "special": "None",
+    "cards": ["september1", "september2", "september3", "september4"]
+},
+ {
+    "name": "October",
+    "points": 10,
+    "special": "None",
+    "cards": ["october1", "october2", "october3", "october4"]
+},
+ {
+    "name": "November",
+    "points": 10,
+    "special": "None",
+    "cards": ["november1", "november2", "november3", "november4"]
+},
+ {
+    "name": "December",
+    "points": 10,
+    "special": "None",
+    "cards": ["december1", "december2", "december3", "december4"]
+},
+ {
+    "name": "Poetry Ribbons",
+    "points": 10,
+    "special": "None",
+    "cards": ["january3", "february3", "march3"]
+},
+ {
+    "name": "Red Ribbons",
+    "points": 10,
+    "special": "None",
+    "cards": ["april3", "may3", "july3"]
+},
+ {
+    "name": "Purple Ribbons",
+    "points": 10,
+    "special": "None",
+    "cards": ["june3", "september3", "october3"]
+}
+]
