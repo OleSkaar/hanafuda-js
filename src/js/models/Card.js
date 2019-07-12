@@ -1,5 +1,6 @@
 export default class Card {
-    constructor(points, img) {
+    constructor(name, points, img) {
+        this.name = name,
         this.points = points,
         this.img = img,
         this.belongsToSets = [];

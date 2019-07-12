@@ -23,10 +23,15 @@ header {
 .counter {
     width: 20%;
     display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    
 }
 
 .counter-left {
     float: left;
+    font-size: 40px;
+    font-weight: 800;
 }
 
 .counter-right {

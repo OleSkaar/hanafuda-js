@@ -1,6 +1,10 @@
+import '../css/style.css';
 import Hanafuda from './models/Hanafuda.js';
 import cards from '../data/cards.json';
 import sets from '../data/sets.json';
+import * as cardView from './views/cardView.js';
+import * as pointsView from './views/pointsView.js';
+import { DOMStr, elements } from './views/elements.js';
 
 console.log('Index.js loaded.');
 
@@ -15,24 +19,24 @@ hanafuda.loadSets(sets);
 hanafuda.addCardsToSets();
 
 // 4. Load state, if any, from cookies
+// For each card in hand from cookies, move card from deck to hand
 
 // 5. Load cards in UI
+hanafuda.hand.forEach(el => cardView.renderCard(el, elements.hand));
+hanafuda.deck.forEach(el => cardView.renderCard(el, elements.table));
 
 // 6. Set event listeners
-
-    var setupEventListeners = function() {      
     
-        document.addEventListener('click', function (event) {
+document.addEventListener('click', function (event) {
+        
+    if (event.target.matches(DOMStr.card) && event.target.parentElement.matches(DOMStr.table)) {
+        elements.hand.appendChild(event.target);
+        hanafuda.addCardToHand(event.target.dataset.cardname);
+        pointsView.renderPoints(hanafuda.points);
+    }
             
-            if (event.target.matches('.card') && event.target.parentElement.matches('#table')) {
-                document.querySelector('#hand').appendChild(event.target);
-                hanafuda.addCardToHand(event.target.dataset.cardname);
-            }
-            
-        }, false);        
-    };
+}, false);        
 
-setupEventListeners();
 
 
 // Views for points and sets

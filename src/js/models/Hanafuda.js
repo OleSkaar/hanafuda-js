@@ -14,8 +14,7 @@ export default class Hanafuda {
     
     loadCards (cardData) {
         cardData.forEach(el => {
-            this.deck.set(el.name, new Card(el.points, el.img));
-            cardView.renderCard(el);
+            this.deck.set(el.name, new Card(el.name, el.points, el.img));
         });
     }
     
