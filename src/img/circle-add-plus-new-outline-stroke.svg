@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>circle-add-plus-new-outline-stroke</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="miu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-503.000000, -155.000000)">
+            <g id="slice" sketch:type="MSLayerGroup" transform="translate(215.000000, 119.000000)"></g>
+            <path d="M515.5,178 C521.851275,178 527,172.851275 527,166.5 C527,160.148725 521.851275,155 515.5,155 C509.148725,155 504,160.148725 504,166.5 C504,172.851275 509.148725,178 515.5,178 Z M515.5,177 C521.29899,177 526,172.29899 526,166.5 C526,160.70101 521.29899,156 515.5,156 C509.70101,156 505,160.70101 505,166.5 C505,172.29899 509.70101,177 515.5,177 Z M509,167 L509,166 L515,166 L515,160 L516,160 L516,166 L522,166 L522,167 L516,167 L516,173 L515,173 L515,167 L509,167 Z" id="circle-add-plus-new-outline-stroke" fill="#000000" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

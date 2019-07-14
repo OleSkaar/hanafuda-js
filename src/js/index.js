@@ -33,11 +33,12 @@ document.addEventListener('click', function (event) {
         elements.hand.appendChild(event.target);
         hanafuda.addCardToHand(event.target.dataset.cardname);
         pointsView.renderPoints(hanafuda.points);
+        pointsView.renderSets(hanafuda.completeSets.length);   
     }
             
 }, false);        
 
-
+1
 
 // Views for points and sets
 // Dropdown menu for partial and completed sets

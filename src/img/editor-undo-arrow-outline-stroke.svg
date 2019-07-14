@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>editor-undo-arrow-outline-stroke</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="miu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-647.000000, -192.000000)">
+            <g id="slice" sketch:type="MSLayerGroup" transform="translate(215.000000, 119.000000)"></g>
+            <path d="M649.101419,201.5 C649.833009,196.134473 654.433675,192 660,192 C666.075133,192 671,196.924867 671,203 C671,208.957095 666.264651,213.808189 660.352783,213.99445 L660.352783,213.99445 L660.352783,212.993893 C665.712252,212.808071 670,208.404764 670,203 C670,197.477152 665.522848,193 660,193 C654.986962,193 650.835476,196.688737 650.11175,201.5 L652,201.5 L649.5,204.5 L647,201.5 L649.101419,201.5 Z" id="editor-undo-arrow-outline-stroke" fill="#000000" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

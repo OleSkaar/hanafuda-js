@@ -9,5 +9,6 @@ export const DOMStr = {
 export const elements = {
     table: document.querySelector(DOMStr.table),
     hand: document.querySelector(DOMStr.hand),
-    points: document.querySelector(DOMStr.points)
+    points: document.querySelector(DOMStr.points),
+    sets: document.querySelector(DOMStr.sets)
 }
