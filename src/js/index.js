@@ -27,23 +27,37 @@ hanafuda.deck.forEach(el => cardView.renderCard(el, elements.table));
 
 // 6. Set event listeners
     
-document.addEventListener('click', function (event) {
-        
-    if (event.target.matches(DOMStr.card) && event.target.parentElement.matches(DOMStr.table)) {
+
+elements.table.addEventListener('click', function (event) {
+    
+    if (event.target.matches(DOMStr.card)) {
+
         elements.hand.appendChild(event.target);
         hanafuda.addCardToHand(event.target.dataset.cardname);
         pointsView.renderPoints(hanafuda.points);
-        pointsView.renderSets(hanafuda.completeSets.length);   
-    }
-            
+        pointsView.renderSets(hanafuda.completeSets.length);  
+    } 
+     
 }, false);        
 
-1
+elements.undo.addEventListener('click', () => {
+    const lastCard = hanafuda.getLastCard();
+    hanafuda.undo();
+    pointsView.renderPoints(hanafuda.points);
+    pointsView.renderSets(hanafuda.completeSets.length);
+    cardView.removeCard(lastCard);
+});
+
+elements.new.addEventListener('click', () => {
+    console.log('reset');
+    hanafuda.hand.forEach(el => cardView.removeCard(el));
+    hanafuda.reset();
+    pointsView.renderPoints(hanafuda.points);
+    pointsView.renderSets(hanafuda.completeSets.length);
+});
 
 // Views for points and sets
-// Dropdown menu for partial and completed sets
-// Reset functionality, clear all cards in hand 
 // Undo functionality by going backwards through cards in hand one by one
+// Reset functionality, clear all cards in hand 
 // View for question mark with expanatory text
-
-
+// Dropdown menu for partial and completed sets

@@ -72,4 +72,49 @@ export default class Hanafuda {
         }
         console.log(`Points: ${this.points}`);
     }
+    
+    getLastCard() {
+        return Array.from(this.hand.values()).pop();
+    }
+    
+    undo() {
+        // Remove last card from hand
+        const lastCard = this.getLastCard();
+        
+        // Subtract card points from points
+        this.points -= lastCard.points;
+        this.deck.set(lastCard.name, lastCard);
+        this.hand.delete(lastCard.name);
+        
+        // If last card was in a complete set, move set from complete to partial and subtract set points
+        for (const set of this.completeSets) {
+            if (set.cardKeys.includes(lastCard.name)) {
+                this.partialSets.push(set);
+                this.completeSets = this.completeSets.filter(el => el !== set);
+                this.points -= set.points;
+            }
+        }
+        
+        // If last card was in partial set, if no other cards from set in hand, remove from partial set
+        for (const set of lastCard.belongsToSets) {
+            let empty = true;
+            
+            for (const card of set.cardKeys) {
+                if (this.hand.has(card)) {
+                    empty = false;
+                    break;
+                } 
+            }
+            
+            if (empty) { 
+                this.partialSets = this.partialSets.filter(el => el !== set);
+            }
+        }
+    }
+    
+    reset() {
+        while (this.hand.size > 0) {
+            this.undo();
+        }
+    }
 }

@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>花札 - Hanafuda</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    
   </head>
   <body>
       <header>
           <div class="topbar">
             <div class="halfwidth justify-left"><h1>Hanafuda</h1></div>
             <div class="halfwidth justify-right"> 
-                <a href="#"><img src="./img/editor-undo-arrow-outline-stroke.svg" class="icon"></a>
-                <a href="#"><img src="./img/circle-add-plus-new-outline-stroke.svg" class="icon"></a>
-                <a href="#"><img src="./img/questions-circular-button.svg" class="icon"></a>
+                <a href="#"><img src="./img/editor-undo-arrow-outline-stroke.svg" class="icon" id="undo"></a>
+                <a href="#"><img src="./img/circle-add-plus-new-outline-stroke.svg" class="icon" id="new"></a>
+                <a href="#"><img src="./img/questions-circular-button.svg" class="icon" id="info"></a>
                 
             </div>
           </div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="arrowBox">
                     <a href="#">
-                        <img src="./img/down-arrow-circular-button.svg" class="bigIcon">
+                        <img src="./img/down-arrow-circular-button.svg" class="bigIcon" id="more">
                     </a>    
                 </div>  
                 <div class="halfwidth justify-center">
@@ -41,6 +41,5 @@
       <section id="hand" class="cardBox"></section>
       <section id="table" class="cardBox"></section>
 
-      <script type="text/javascript" src="js/bundle.js"></script>
   </body>
 </html> 
