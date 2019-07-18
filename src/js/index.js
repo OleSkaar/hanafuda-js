@@ -26,7 +26,6 @@ hanafuda.hand.forEach(el => cardView.renderCard(el, elements.hand));
 hanafuda.deck.forEach(el => cardView.renderCard(el, elements.table));
 
 // 6. Set event listeners
-    
 
 elements.table.addEventListener('click', function (event) {
     
@@ -41,19 +40,44 @@ elements.table.addEventListener('click', function (event) {
 }, false);        
 
 elements.undo.addEventListener('click', () => {
-    const lastCard = hanafuda.getLastCard();
-    hanafuda.undo();
-    pointsView.renderPoints(hanafuda.points);
-    pointsView.renderSets(hanafuda.completeSets.length);
-    cardView.removeCard(lastCard);
+    if (hanafuda.hand.size > 0) {
+        const lastCard = hanafuda.getLastCard();
+        hanafuda.undo();
+        pointsView.renderPoints(hanafuda.points);
+        pointsView.renderSets(hanafuda.completeSets.length);
+        cardView.removeCard(lastCard);
+    }
+    
 });
 
 elements.new.addEventListener('click', () => {
-    console.log('reset');
-    hanafuda.hand.forEach(el => cardView.removeCard(el));
-    hanafuda.reset();
-    pointsView.renderPoints(hanafuda.points);
-    pointsView.renderSets(hanafuda.completeSets.length);
+    if (hanafuda.hand.size > 0) {
+        const confirm = window.confirm('Do you want to reset the game? All your points will be lost.');
+        hanafuda.hand.forEach(el => cardView.removeCard(el));
+        hanafuda.reset();
+        pointsView.renderPoints(hanafuda.points);
+        pointsView.renderSets(hanafuda.completeSets.length);
+    }
+});
+
+elements.info.addEventListener('click', () => {
+    if (elements.infobox.style.display === 'none') {
+        elements.infobox.style.display = 'block';
+    } else {
+        elements.infobox.style.display = 'none';
+    }
+    
+});
+
+elements.more.addEventListener('click', () => {
+    if (hanafuda.hand.size > 0) {
+        if (elements.expandedhand.style.display === 'none') {
+            elements.expandedhand.style.display = 'block';
+        } else {
+            elements.expandedhand.style.display = 'none';
+        }    
+        pointsView.renderHand(hanafuda.hand, hanafuda.completeSets, hanafuda.partialSets);
+    }
 });
 
 // Views for points and sets

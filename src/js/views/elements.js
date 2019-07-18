@@ -5,9 +5,12 @@ export const DOMStr = {
     sets: '#sets',
     undo: '#undo',
     new: '#new',
-    info: '#undo',
+    info: '#info',
     more: '#more',
-    card: '.card'  
+    infobox: '#infobox',
+    expandedhand: '#expandedhand',
+    card: '.card',
+    cardBox: '.cardBox'
 }
 
 export const elements = {
@@ -18,5 +21,7 @@ export const elements = {
     undo: document.querySelector(DOMStr.undo),
     new: document.querySelector(DOMStr.new),
     info: document.querySelector(DOMStr.info),
-    more: document.querySelector(DOMStr.more)   
+    more: document.querySelector(DOMStr.more),
+    infobox: document.querySelector(DOMStr.infobox),
+    expandedhand: document.querySelector(DOMStr.expandedhand)
 }

@@ -13,21 +13,15 @@ export default class Hanafuda {
     }
     
     loadCards (cardData) {
-        cardData.forEach(el => {
-            this.deck.set(el.name, new Card(el.name, el.points, el.img));
-        });
+        cardData.forEach(el => this.deck.set(el.name, new Card(el.name, el.points, el.img)));
     }
     
     loadSets (setData) {
-        setData.forEach(el => {
-            this.sets.push(new Set(el.points, el.name, el.special, el.cards));
-        });
+        setData.forEach(el => this.sets.push(new Set(el.points, el.name, el.special, el.cards)));
     }
     
     addCardsToSets() {
-        this.sets.forEach(el => {
-            el.findCardsInSet(this.deck);
-            });
+        this.sets.forEach(el => el.findCardsInSet(this.deck));
     }
     
     loadState() {
@@ -113,8 +107,10 @@ export default class Hanafuda {
     }
     
     reset() {
-        while (this.hand.size > 0) {
-            this.undo();
-        }
+        this.hand.forEach((value, key) => this.deck.set(key, value));
+        this.hand.clear();
+        this.partialSets = [];
+        this.completeSets = [];
+        this.points = 0;
     }
 }
