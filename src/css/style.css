@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -28,6 +29,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-family: MS Gothic;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -85,14 +88,6 @@ header {
     justify-content: center;
 }
 
-.card {
-    display: inline-block;
-    padding: 2px;
-    border-radius: 5px;
-    flex-basis: auto;
-    max-width: 20vw;
-}
-
 .empty {
     opacity: 0.2;
 }
@@ -103,24 +98,27 @@ header {
     text-align: center;
 }
 
-.counter-left {
-    float: left;
-    font-size: 40px;
-    font-weight: 800;
-}
-
-.counter-right {
-    float: right;
-}
-
 .cardBox {
+    height: 35vh;
     width: 100%;
-    height: 40vh;
     border-top: black dotted 2px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
+}
+
+.card {
+    display: inline-block;
+    padding: 2px;
+    border-radius: 5px;
+    flex-basis: auto;
+    max-width: 20vw;
+    min-width: 5vw;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .arrowBox {
