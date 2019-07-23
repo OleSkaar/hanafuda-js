@@ -22,8 +22,8 @@ hanafuda.addCardsToSets();
 // For each card in hand from cookies, move card from deck to hand
 
 // 5. Load cards in UI
-hanafuda.hand.forEach(el => cardView.renderCard(el, elements.hand));
-hanafuda.deck.forEach(el => cardView.renderCard(el, elements.table));
+hanafuda.hand.forEach(card => cardView.renderCard(card, elements.hand));
+hanafuda.deck.forEach(card => cardView.renderCard(card, elements.table));
 
 // 6. Set event listeners
 

@@ -32,4 +32,4 @@ export const renderHand = (hand, completeSets, partialSets) => {
     
     helper(completeSets, document.getElementById('complete'));
     helper(partialSets, document.getElementById('partial'));
-}
+};

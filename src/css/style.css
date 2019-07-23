@@ -90,6 +90,7 @@ header {
     padding: 2px;
     border-radius: 5px;
     flex-basis: auto;
+    max-width: 20vw;
 }
 
 .empty {
@@ -120,7 +121,6 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 }
 
 .arrowBox {
