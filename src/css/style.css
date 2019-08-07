@@ -99,7 +99,7 @@ header {
 }
 
 .cardBox {
-    height: 35vh;
+    height: 40%;
     width: 100%;
     border-top: black dotted 2px;
     display: flex;
@@ -110,8 +110,8 @@ header {
     overflow-y: scroll;
 }
 
-.handBox {
-    max-height: 35vh;
+.tableBox {
+    max-height: 40%;
     width: 100%;
     margin: auto;
     max-width: 720px;
@@ -121,9 +121,10 @@ header {
     grid-template-rows: repeat(2, 50%);
     grid-row-gap: 10px;
     place-items: center;
+    overflow-y: hidden;
 }
 
-.handCard {
+.tableCard {
     display: block;
     max-width: 100%;
     height: auto;

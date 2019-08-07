@@ -1,7 +1,7 @@
 import { DOMStr, elements } from './elements.js';
 
 export const renderCard = (card, el) => {
-    const markup = `<img src="${card.img}" class="card handCard" id="${card.name}" data-cardname=${card.name}></img>`;
+    const markup = `<img src="${card.img}" class="card tableCard" id="${card.name}" data-cardname=${card.name}></img>`;
     el.insertAdjacentHTML('afterbegin', markup);
 
 };
