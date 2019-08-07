@@ -1,7 +1,7 @@
 import { DOMStr, elements } from './elements.js';
 
 export const renderCard = (card, el) => {
-    const markup = `<img src="${card.img}" class="card tableCard" id="${card.name}" data-cardname=${card.name}></img>`;
+    const markup = `<img src="${card.img}" class="card" id="${card.name}" data-cardname=${card.name}></img>`;
     el.insertAdjacentHTML('afterbegin', markup);
 
 };
@@ -12,9 +12,14 @@ export const removeCard = card => {
     renderCard(card, elements.table);
 };
 
+export const renderTableCards = cards => {
+    // When app loads, load cards from data to deck. 
+    // Split them into 8-card segments, each with its own slide
+    
+}
 
-// When app loads, load cards from data to deck. 
-// Split them into 8-card segments, each with its own slide
+
+
 // For each card in hand, toggle card in deck as empty
 // When a card is added or removed, the empty class is toggled and animation plays
 
